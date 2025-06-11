@@ -26,7 +26,6 @@ app.use("/api/nilai-app", studentRoute);
 
 // Database connecting
 db.getConnection().then(() => {
-  // App running
   app.listen(PORT, async (err) => {
     if (err) return console.log("[-] Server Error: " + err);
 
