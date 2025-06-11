@@ -24,6 +24,10 @@ app.use(bodyParser.json());
 
 app.use("/api/nilai-app", studentRoute);
 
+app.get("/", (req, res) => {
+  return res.json("Hello World");
+});
+
 // Database connecting
 db.getConnection().then(() => {
   app.listen(PORT, async (err) => {
